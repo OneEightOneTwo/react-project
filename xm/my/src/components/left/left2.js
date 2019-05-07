@@ -7,22 +7,22 @@ const data = [{
     key: '1',
     name: 'John Brown',
     age: 32,
-    address: 'New York No. 1 Lake Park',
+    address: '../../assets/0.jpg',
   }, {
     key: '2',
     name: 'Joe Black',
     age: 42,
-    address: 'London No. 1 Lake Park',
+    address: '../../assets/1.jpg',
   }, {
     key: '3',
     name: 'Jim Green',
     age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    address: '../../assets/2.jpg',
   }, {
     key: '4',
     name: 'Jim Red',
     age: 32,
-    address: 'London No. 2 Lake Park',
+    address: '../../assets/3.jpg',
   }];
   
   class App extends React.Component {
@@ -109,7 +109,7 @@ const data = [{
         width: '20%',
         ...this.getColumnSearchProps('age'),
       }, {
-        title: 'Address',
+        title: 'picture',
         dataIndex: 'address',
         key: 'address',
         ...this.getColumnSearchProps('address'),

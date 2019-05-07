@@ -9,8 +9,8 @@ import {Table, Input, InputNumber, Popconfirm, Form,Button} from 'antd';
     data.push({
       key: i.toString(),
       name: `Edrward ${i}`,
-      age: 32,
-      address: `London Park no. ${i}`,
+      num: 99,
+      address: `../../assets/${i}.jpg`,
     });
   }
   const FormItem = Form.Item;
@@ -45,7 +45,7 @@ import {Table, Input, InputNumber, Popconfirm, Form,Button} from 'antd';
                     {getFieldDecorator(dataIndex, {
                       rules: [{
                         required: true,
-                        message: `Please Input ${title}!`,
+                        messnum: `Please Input ${title}!`,
                       }],
                       initialValue: record[dataIndex],
                     })(this.getInput())}
@@ -71,15 +71,15 @@ import {Table, Input, InputNumber, Popconfirm, Form,Button} from 'antd';
           editable: true,
         },
         {
-          title: 'age',
-          dataIndex: 'age',
+          title: 'num',
+          dataIndex: 'num',
           width: '15%',
           editable: true,
         },
         {
-          title: 'address',
+          title: 'picture',
           dataIndex: 'address',
-          width: '40%',
+          width: '30%',
           editable: true,
         },
         {
@@ -173,7 +173,7 @@ import {Table, Input, InputNumber, Popconfirm, Form,Button} from 'antd';
           ...col,
           onCell: record => ({
             record,
-            inputType: col.dataIndex === 'age' ? 'number' : 'text',
+            inputType: col.dataIndex === 'num' ? 'number' : 'text',
             dataIndex: col.dataIndex,
             title: col.title,
             editing: this.isEditing(record),
